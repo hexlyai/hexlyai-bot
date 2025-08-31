@@ -3,7 +3,7 @@ from telegram import Update, ParseMode
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 from db import get_user, latest_ads
 
-TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+TELEGRAM_BOT_TOKEN = os.getenv("8416762998:AAEOqMmFGqL-mMiXQR1UfAqYRgrHe40vPJ0")
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Welcome. Use /latest or /subscribe to get premium alerts.")
@@ -27,9 +27,8 @@ async def ping(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("pong")
 
 def main():
-    app = Application.builder().token(TELEGRAM_BOT_TOKEN).build()
-    app.add_handler(CommandHandler("start", start))
-    app.add_handler(CommandHandler("latest", latest))
+    app = Application.builder().token(8416762998:"AAEOqMmFGqL-mMiXQR1UfAqYRgrHe40vPJ0").build()
+    app.add_handler(CommandHandler("start", start))AAEOqMmFGqL-mMiXQR1UfAqYRgrHe40vPJ0("latest", latest))
     app.add_handler(CommandHandler("ping", ping))
     app.run_polling()
 
